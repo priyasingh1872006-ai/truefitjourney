@@ -1,0 +1,178 @@
+/* =========================
+   1. PRIMER PRIMITIVES
+========================= */
+@layer primer-css-base,primer-react,recipes;
+:root{
+--base-duration-0:0s;
+--base-duration-50:50ms;
+--base-duration-100:.1s;
+--base-duration-200:.2s;
+--base-duration-300:.3s;
+--base-duration-400:.4s;
+--base-duration-500:.5s;
+--base-duration-600:.6s;
+--base-duration-700:.7s;
+--base-duration-800:.8s;
+--base-duration-900:.9s;
+--base-duration-1000:1s;
+
+--base-size-2:.125rem;
+--base-size-4:.25rem;
+--base-size-6:.375rem;
+--base-size-8:.5rem;
+--base-size-12:.75rem;
+--base-size-16:1rem;
+--base-size-20:1.25rem;
+--base-size-24:1.5rem;
+--base-size-28:1.75rem;
+--base-size-32:2rem;
+--base-size-36:2.25rem;
+--base-size-40:2.5rem;
+--base-size-44:2.75rem;
+--base-size-48:3rem;
+
+--borderRadius-small:.1875rem;
+--borderRadius-medium:.375rem;
+--borderRadius-large:.75rem;
+
+--base-text-size-xs:.75rem;
+--base-text-size-sm:.875rem;
+--base-text-size-md:1rem;
+--base-text-size-lg:1.25rem;
+--base-text-size-xl:2rem;
+
+--base-text-weight-normal:400;
+--base-text-weight-medium:500;
+--base-text-weight-semibold:600;
+}
+
+/* =========================
+   2. PRIMER BASE
+========================= */
+:root{
+--h00-size-mobile:2.5rem;
+--h0-size-mobile:2rem;
+--h1-size-mobile:1.625rem;
+--h2-size-mobile:1.375rem;
+--h3-size-mobile:1.125rem;
+
+--h00-size:3rem;
+--h0-size:2.5rem;
+--h1-size:2rem;
+--h2-size:1.5rem;
+--h3-size:1.25rem;
+--h4-size:1rem;
+--h5-size:.875rem;
+--h6-size:.75rem;
+
+--body-font-size:.875rem;
+}
+
+/* Reset + base styles */
+html{
+font-family:sans-serif;
+font-size:16px;
+}
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+line-height:1.5;
+}
+h1{font-size:var(--h1-size);}
+h2{font-size:var(--h2-size);}
+h3{font-size:var(--h3-size);}
+h4{font-size:var(--h4-size);}
+h5{font-size:var(--h5-size);}
+h6{font-size:var(--h6-size);}
+
+/* Buttons */
+.btn{
+padding:5px 16px;
+font-size:14px;
+border:1px solid;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* Forms */
+.form-control{
+padding:5px 12px;
+border-radius:6px;
+border:1px solid var(--borderColor-default,#ccc);
+}
+
+/* =========================
+   3. REPOSITORY COMPONENTS
+========================= */
+.MatrixComponent-pending{
+padding:var(--base-size-12);
+transition:opacity .12s ease-out;
+}
+
+.WorkflowJob{
+padding:var(--base-size-12);
+transition:opacity .12s ease-out;
+}
+
+table.capped-list{
+width:100%;
+border-collapse:collapse;
+}
+table.capped-list th{
+padding:8px;
+background:#f6f8fa;
+}
+table.capped-list td{
+padding:8px;
+font-size:12px;
+}
+
+/* =========================
+   4. LIGHT THEME
+========================= */
+[data-color-mode=light]{
+--bgColor-default:#ffffff;
+--fgColor-default:#24292f;
+
+--bgColor-muted:#f6f8fa;
+--borderColor-default:#d1d9e0;
+
+--bgColor-accent-emphasis:#0969da;
+--fgColor-accent:#0969da;
+
+--bgColor-success-emphasis:#1f883d;
+--bgColor-danger-emphasis:#cf222e;
+
+--color-ansi-blue:#0969da;
+--color-ansi-green:#116329;
+--color-ansi-red:#cf222e;
+}
+
+/* =========================
+   5. DARK THEME
+========================= */
+[data-color-mode=dark]{
+--bgColor-default:#0d1117;
+--fgColor-default:#e6edf3;
+
+--bgColor-muted:#151b23;
+--borderColor-default:#3d444d;
+
+--bgColor-accent-emphasis:#1f6feb;
+--fgColor-accent:#58a6ff;
+
+--bgColor-success-emphasis:#238636;
+--bgColor-danger-emphasis:#da3633;
+
+--color-ansi-blue:#58a6ff;
+--color-ansi-green:#3fb950;
+--color-ansi-red:#ff7b72;
+}
+
+/* =========================
+   GLOBAL APPLY
+========================= */
+[data-color-mode]{
+color:var(--fgColor-default);
+background-color:var(--bgColor-default);
+}
